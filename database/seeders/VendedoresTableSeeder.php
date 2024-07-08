@@ -16,5 +16,4 @@ class VendedoresTableSeeder extends Seeder
     {
         Vendedor::factory()->create();
     }
-    
 }

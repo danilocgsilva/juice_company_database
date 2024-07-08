@@ -25,12 +25,22 @@ class VendedorFactory extends Factory
     public function definition(): array
     {
         return [
-            'MATRICULA' => '00119',
+            'MATRICULA' => $this->generateMatricula(),
             'NOME' => $this->faker->name,
             'PERCENTUAL_COMISSAO' => 0.08,
             'DATA_ADMISSAO' => '2023-07-10',
             'DE_FERIAS' => 0,
             'BAIRRO' => 'Tijuca'
         ];
+    }
+
+    public function generateMatricula(): string
+    {
+        return str_pad(
+            (string) rand(1, 99999),
+            5,
+            "0",
+            STR_PAD_LEFT
+        );
     }
 }
