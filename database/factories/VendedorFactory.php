@@ -27,7 +27,7 @@ class VendedorFactory extends Factory
         return [
             'MATRICULA' => $this->generateMatricula(),
             'NOME' => $this->faker->name,
-            'PERCENTUAL_COMISSAO' => 0.08,
+            'PERCENTUAL_COMISSAO' => $this->gerarComissaoAleatoreamente(),
             'DATA_ADMISSAO' => '2023-07-10',
             'DE_FERIAS' => 0,
             'BAIRRO' => 'Tijuca'
@@ -42,5 +42,14 @@ class VendedorFactory extends Factory
             "0",
             STR_PAD_LEFT
         );
+    }
+
+    private function gerarComissaoAleatoreamente(): float
+    {
+        $fator1 = rand(1, 9) ** 3;
+        // $fator2 = rand(0, 19);
+        // $fator3 = $fator1 + $fator2;
+        $fator4 = $fator1 / 100.0;
+        return $fator4;
     }
 }
