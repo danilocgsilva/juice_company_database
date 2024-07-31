@@ -12,4 +12,9 @@ class Vendedor extends Model
     public $timestamps = false;
     
     protected $table = "tabela_de_vendedores";
+
+    public function getVendedorName(): string
+    {
+        return $this->NOME;
+    }
 }

@@ -26,25 +26,7 @@ class CriarVendedorCommand extends Command
      */
     public function handle()
     {
-        // $vendedoresFactory = Vendedor::factory()
-        // ->count($this->option('quantidade'));
-
-        // $vendedores = [];
-        // if ($this->option('percentual-comissao')) {
-        //     $vendedores = $vendedoresFactory->make([
-        //         'PERCENTUAL_COMISSAO' => (double) $this->option('percentual-comissao')
-        //     ]);
-        // } else {
-        //     $vendedores = $vendedoresFactory->make();
-        // }
-
-        // print("Os vendedores serão criados:\n");
-        // foreach ($vendedores as $vendedor) {
-        //     print($vendedor->NOME . "\n");
-        //     print("Comissão: " . $vendedor->PERCENTUAL_COMISSAO . "\n");
-        //     $vendedor->create();
-        // }
-
+        /** @var \App\Models\Vendedor[] */
         $vendedores = Vendedor::factory()
             ->count($this->option('quantidade'))
             ->create();
@@ -58,5 +40,9 @@ class CriarVendedorCommand extends Command
             ($quantidadeDeVendedores > 1 ? "vendedores" : "vendedor") . 
             ".\n"
         );
+
+        foreach ($vendedores as $vendedor) {
+            print($vendedor->getVendedorName() . PHP_EOL);
+        }
     }
 }
