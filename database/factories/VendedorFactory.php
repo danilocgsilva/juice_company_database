@@ -30,7 +30,7 @@ class VendedorFactory extends Factory
             'PERCENTUAL_COMISSAO' => $this->gerarComissaoAleatoreamente(),
             'DATA_ADMISSAO' => '2023-07-10',
             'DE_FERIAS' => 0,
-            'BAIRRO' => 'Tijuca'
+            'BAIRRO' => $this->faker->streetName
         ];
     }
 
@@ -46,10 +46,9 @@ class VendedorFactory extends Factory
 
     private function gerarComissaoAleatoreamente(): float
     {
-        $fator1 = rand(1, 9) ** 3;
-        // $fator2 = rand(0, 19);
-        // $fator3 = $fator1 + $fator2;
-        $fator4 = $fator1 / 100.0;
-        return $fator4;
+        $fator1 = rand(1, 99) ** 2;
+        $fator4 = $fator1 + rand(0,199);
+        $fator5 = $fator4 / 10000.0;
+        return $fator5;
     }
 }

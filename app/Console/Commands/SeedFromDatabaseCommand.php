@@ -28,6 +28,12 @@ class SeedFromDatabaseCommand extends Command
     {
         $stringGenerator = new StringGenerator();
         
+        $databaseName = "sucos";
+        $tableName = "tabela_de_produtos";
+
+        $stringGenerator->setDatabaseName($databaseName);
+        $stringGenerator->setTableName($tableName);
+
         $stringGenerated = $stringGenerator->generate();
 
         print($stringGenerated . PHP_EOL);
