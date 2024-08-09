@@ -4,6 +4,8 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Vendedor;
+use MathPHP\Probability\Distribution\Continuous\Normal;
+use Illuminate\Support\Collection;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -11,6 +13,34 @@ use App\Models\Vendedor;
 class VendedorFactory extends Factory
 {
     protected $model = Vendedor::class;
+
+    private Normal $normalDistribuition;
+
+    public function __construct(
+        $count = null,
+        ?Collection $states = null,
+        ?Collection $has = null,
+        ?Collection $for = null,
+        ?Collection $afterMaking = null,
+        ?Collection $afterCreating = null,
+        $connection = null,
+        ?Collection $recycle = null
+    ) {
+        parent::__construct(
+            $count,
+            $states,
+            $has,
+            $for,
+            $afterMaking,
+            $afterCreating,
+            $connection,
+            $recycle
+        );
+
+        $mean = 0.13;
+        $stdDeviation = 0.05;
+        $this->normalDistribuition = new Normal($mean, $stdDeviation);
+    }
 
     public function withFaker()
     {
@@ -44,11 +74,14 @@ class VendedorFactory extends Factory
         );
     }
 
-    private function gerarComissaoAleatoreamente(): float
+    private function gerarComissaoAleatoreamente()
     {
-        $fator1 = rand(1, 99) ** 2;
-        $fator4 = $fator1 + rand(0,199);
-        $fator5 = $fator4 / 10000.0;
-        return $fator5;
+        $normalChoosen = $this->normalDistribuition->rand();
+        
+        if ($normalChoosen < ($mean = $this->normalDistribuition->mean())) {
+            $diference = $mean - $normalChoosen;
+            return $normalChoosen + ($diference / 2);
+        }
+        return $normalChoosen;
     }
 }
