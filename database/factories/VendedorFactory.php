@@ -76,12 +76,13 @@ class VendedorFactory extends Factory
 
     private function gerarComissaoAleatoreamente()
     {
-        $normalChoosen = $this->normalDistribuition->rand();
+        $preNormalChoosen = $this->normalDistribuition->rand();
+        $normalChoosen = $preNormalChoosen;
         
-        if ($normalChoosen < ($mean = $this->normalDistribuition->mean())) {
-            $diference = $mean - $normalChoosen;
-            return $normalChoosen + ($diference / 2);
+        if ($preNormalChoosen < ($mean = $this->normalDistribuition->mean())) {
+            $diference = $mean - $preNormalChoosen;
+            $normalChoosen = $preNormalChoosen + ($diference / 2);
         }
-        return $normalChoosen;
+        return round($normalChoosen, 3);
     }
 }
