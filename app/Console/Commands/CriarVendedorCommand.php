@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use App\Models\Vendedor;
 use Illuminate\Console\Command;
+use Exception;
 
 class CriarVendedorCommand extends Command
 {
@@ -27,9 +28,20 @@ class CriarVendedorCommand extends Command
     public function handle()
     {
         /** @var \App\Models\Vendedor[] */
-        $vendedores = Vendedor::factory()
-            ->count($this->option('quantidade'))
-            ->create();
+        $vendedores = [];
+        for ($i = 0; $i < (int) $this->option('quantidade'); $i++) {
+            $success = false;
+            while (!$success) {
+                $trial = 1;
+                try {
+                    $vendedores[] = Vendedor::factory()->create();
+                    $success = true;
+                } catch (Exception $e) {
+                    print("Oops, exception: " . $e->getMessage() . " at trial {$trial}, but I will continue...\n");
+                    $trial++;
+                }
+            }
+        }
 
         $quantidadeDeVendedores = count($vendedores);
 
