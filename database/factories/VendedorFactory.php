@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Vendedor;
 use MathPHP\Probability\Distribution\Continuous\Normal;
 use Illuminate\Support\Collection;
+use DateTime;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -58,8 +59,8 @@ class VendedorFactory extends Factory
             'MATRICULA' => $this->generateMatricula(),
             'NOME' => $this->faker->name,
             'PERCENTUAL_COMISSAO' => $this->gerarComissaoAleatoreamente(),
-            'DATA_ADMISSAO' => '2023-07-10',
-            'DE_FERIAS' => 0,
+            'DATA_ADMISSAO' => $this->gerarDataDistribuicao(),
+            'DE_FERIAS' => rand(1, 12) === 12 ? "1" : 0,
             'BAIRRO' => $this->faker->streetName
         ];
     }
@@ -84,5 +85,12 @@ class VendedorFactory extends Factory
             $normalChoosen = $preNormalChoosen + ($diference / 2);
         }
         return round($normalChoosen, 3);
+    }
+
+    private function gerarDataDistribuicao()
+    {
+        $unixTimestampValue = rand(1_423_344_244, 1_723_344_244);
+        $datetimeChoosen = DateTime::createFromFormat("U", $unixTimestampValue);
+        return $datetimeChoosen->format('Y-m-d');
     }
 }
