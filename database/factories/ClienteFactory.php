@@ -22,21 +22,27 @@ class ClienteFactory extends Factory
      */
     public function definition(): array
     {
+        $cpfGerado = str_replace(".", "",
+            str_replace("-", "", $this->faker->cpf)
+        );
+        
         return [
-            'CPF'               => $this->faker->cpf,
-            'NOME'              => "João Silva",
-            'ENDERECO_1'        => "Rua dos abacates",
-            'ENDERECO_2'        => "Rua das ameixas",
-            'BAIRRO'            => "Liberdade",
-            'CIDADE'            => "São Paulo",
-            'ESTADO'            => "SP",
-            'CEP'               => "01525010",
+            'CPF' => str_replace(".", "",
+                str_replace("-", "", $this->faker->cpf)
+            ),
+            'NOME' => $this->faker->name,
+            'ENDERECO_1' => $this->faker->streetName,
+            'ENDERECO_2' => $this->faker->streetName,
+            'BAIRRO' => $this->faker->bairro,
+            'CIDADE' => "São Paulo",
+            'ESTADO' => "SP",
+            'CEP' => "01525010",
             'DATA_DE_NASCIMENTO'=> "1995-01-03",
-            'IDADE'             => 22,
-            'SEXO'              => 'M',
+            'IDADE' => 22,
+            'SEXO' => 'M',
             'LIMITE_DE_CREDITO' => 110000,
-            'VOLUME_DE_COMPRA'  => 22000,
-            'PRIMEIRA_COMPRA'   => 1
+            'VOLUME_DE_COMPRA' => 22000,
+            'PRIMEIRA_COMPRA' => 1
         ];
     }
 }
