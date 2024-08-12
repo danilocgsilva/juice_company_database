@@ -12,4 +12,9 @@ class Cliente extends Model
     public $timestamps = false;
 
     protected $table = "tabela_de_clientes";
+
+    public function getNome(): string
+    {
+        return $this->NOME;
+    }
 }

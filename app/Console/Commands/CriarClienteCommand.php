@@ -12,7 +12,7 @@ class CriarClienteCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'app:criar-cliente';
+    protected $signature = 'app:criar-cliente {--quantidade=1}';
 
     /**
      * The console command description.
@@ -26,7 +26,10 @@ class CriarClienteCommand extends Command
      */
     public function handle()
     {
-        $cliente = Cliente::factory()->create();
-        print(PHP_EOL . "Feito!." . PHP_EOL);
+        for ($i = 0; $i < (int) $this->option('quantidade'); $i++) {
+            /** @var Cliente */
+            $cliente = Cliente::factory()->create();
+            print($cliente->getNome() . " criado." . PHP_EOL);
+        }
     }
 }
