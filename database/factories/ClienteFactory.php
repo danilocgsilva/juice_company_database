@@ -68,8 +68,9 @@ class ClienteFactory extends Factory
             'IDADE' => $this->calcularIdade($dataNascimentoCliente),
             'SEXO' => $gender,
             'LIMITE_DE_CREDITO' => round($this->normalDistribuitionMimiteCredito->rand()),
-            'VOLUME_DE_COMPRA' => 22000,
-            'PRIMEIRA_COMPRA' => 1
+            //'VOLUME_DE_COMPRA' => 22000,
+            'VOLUME_DE_COMPRA' => $this->gerarDistribuicaoPadrao(),
+            'PRIMEIRA_COMPRA' => rand(0, 3) === 0 ? 0 : 1
         ];
     }
 
@@ -84,5 +85,11 @@ class ClienteFactory extends Factory
     {
         $dataParts = explode("-", $dataString);
         return (string) (new DateTime)->format('Y') - (int) $dataParts[0];
+    }
+
+    private function gerarDistribuicaoPadrao(float $media, float $desvioPadrao): float
+    {
+        $normalDistribuition = new Normal($media, $desvioPadrao);
+        return $normalDistribuition->rand();
     }
 }
