@@ -6,6 +6,7 @@ use App\Models\Cliente;
 use Illuminate\Console\Command;
 use App\Models\NotaFiscal;
 use Exception;
+use Log;
 use App\Models\Vendedor;
 
 class CriarNotasFiscaisCommand extends Command
@@ -29,9 +30,10 @@ class CriarNotasFiscaisCommand extends Command
 
     public function handle()
     {
-        for ($i = 0; $i < (int) $this->option('quantidade'); $i++) {
+        for ($i = 0; $i < ($quantidadeGerada = (int) $this->option('quantidade')); $i++) {
             NotaFiscal::factory()->create();
         }
+        Log::info(sprintf("Quantidade de notas fiscais criadas: %s", $quantidadeGerada));
     }
 
     private function existeCliente(): bool

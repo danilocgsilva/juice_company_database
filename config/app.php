@@ -123,4 +123,11 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'tabelas' => [
+        'itens_notas_fiscais',
+        'notas_fiscais',
+        'tabela_de_clientes',
+        'tabela_de_produtos',
+        'tabela_de_vendedores'
+    ]
 ];
