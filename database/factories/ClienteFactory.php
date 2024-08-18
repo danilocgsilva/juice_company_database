@@ -68,8 +68,7 @@ class ClienteFactory extends Factory
             'IDADE' => $this->calcularIdade($dataNascimentoCliente),
             'SEXO' => $gender,
             'LIMITE_DE_CREDITO' => round($this->normalDistribuitionMimiteCredito->rand()),
-            //'VOLUME_DE_COMPRA' => 22000,
-            'VOLUME_DE_COMPRA' => $this->gerarDistribuicaoPadrao(),
+            'VOLUME_DE_COMPRA' => round($this->gerarDistribuicaoPadrao(18000, 2000), 0),
             'PRIMEIRA_COMPRA' => rand(0, 3) === 0 ? 0 : 1
         ];
     }

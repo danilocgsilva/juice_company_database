@@ -9,9 +9,6 @@ use App\Models\Vendedor;
 
 class VendedoresTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         Vendedor::factory()->create();

@@ -17,4 +17,9 @@ class Cliente extends Model
     {
         return $this->NOME;
     }
+
+    public function getCpf(): string
+    {
+        return $this->CPF;
+    }
 }

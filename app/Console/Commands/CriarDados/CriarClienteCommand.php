@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\CriarDados;
 
 use Illuminate\Console\Command;
 use App\Models\Cliente;

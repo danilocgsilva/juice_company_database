@@ -17,4 +17,9 @@ class Vendedor extends Model
     {
         return $this->NOME;
     }
+
+    public function getMatricula(): string
+    {
+        return $this->MATRICULA;
+    }
 }

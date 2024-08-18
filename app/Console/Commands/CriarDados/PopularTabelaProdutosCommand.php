@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\CriarDados;
 
 use Illuminate\Console\Command;
 
@@ -18,7 +18,7 @@ class PopularTabelaProdutosCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Popula a tabela com produtos padrões';
+    protected $description = 'Popula a tabela com produtos padrÃµes';
 
     /**
      * Execute the console command.
