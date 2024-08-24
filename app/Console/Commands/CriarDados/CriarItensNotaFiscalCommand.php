@@ -27,7 +27,22 @@ class CriarItensNotaFiscalCommand extends Command
     public function handle()
     {
         for ($i = 0; $i < (int) $this->option('quantidade'); $i++) {
-            ItemNotaFiscal::factory()->create();
+            $this->criarItemNotaFiscal();
         }
+    }
+
+    private function criarItemNotaFiscal(): void
+    {
+        /** @var ItemNotaFiscal $item */
+        $item = ItemNotaFiscal::factory()->create();
+        print(
+            sprintf(
+                "Item criado. Número: %s, código do produto: %s, quantidade: %s, preço: %s" . PHP_EOL,
+                $item->getNumero(),
+                $item->getCodigoDoProduto(),
+                $item->getQuantidade(),
+                $item->getPreco()
+            )
+        );
     }
 }
