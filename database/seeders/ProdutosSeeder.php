@@ -18,7 +18,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Uva',
-            'PRECO_DE_LISTA' => '6.309',
+            'PRECO_DE_LISTA' => '6.30',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1002334',
@@ -26,7 +26,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1 Litro',
             'SABOR' => 'Lima/Limão',
-            'PRECO_DE_LISTA' => '7.004',
+            'PRECO_DE_LISTA' => '7.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1002767',
@@ -58,7 +58,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '2 Litros',
             'SABOR' => 'Açaí',
-            'PRECO_DE_LISTA' => '38.012',
+            'PRECO_DE_LISTA' => '38.12',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1037797',
@@ -66,7 +66,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '2 Litros',
             'SABOR' => 'Laranja',
-            'PRECO_DE_LISTA' => '16.008',
+            'PRECO_DE_LISTA' => '16.10',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1040107',
@@ -74,7 +74,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Lata',
             'TAMANHO' => '350 ml',
             'SABOR' => 'Melancia',
-            'PRECO_DE_LISTA' => '4.555',
+            'PRECO_DE_LISTA' => '4.55',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1041119',
@@ -82,7 +82,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Lima/Limão',
-            'PRECO_DE_LISTA' => '4.904',
+            'PRECO_DE_LISTA' => '4.90',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1078680',
@@ -90,7 +90,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '470 ml',
             'SABOR' => 'Manga',
-            'PRECO_DE_LISTA' => '5.1795',
+            'PRECO_DE_LISTA' => '5.20',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1086543',
@@ -98,7 +98,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1 Litro',
             'SABOR' => 'Manga',
-            'PRECO_DE_LISTA' => '11.0105',
+            'PRECO_DE_LISTA' => '11.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1096818',
@@ -106,7 +106,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Manga',
-            'PRECO_DE_LISTA' => '7.7105',
+            'PRECO_DE_LISTA' => '7.70',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '1101035',
@@ -114,7 +114,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1 Litro',
             'SABOR' => 'Morango/Limão',
-            'PRECO_DE_LISTA' => '9.0105',
+            'PRECO_DE_LISTA' => '9.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '229900',
@@ -122,7 +122,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Lata',
             'TAMANHO' => '350 ml',
             'SABOR' => 'Maçã',
-            'PRECO_DE_LISTA' => '4.211',
+            'PRECO_DE_LISTA' => '4.20',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '231776',
@@ -130,7 +130,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Açaí',
-            'PRECO_DE_LISTA' => '13.312',
+            'PRECO_DE_LISTA' => '13.25',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '235653',
@@ -138,7 +138,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Lata',
             'TAMANHO' => '350 ml',
             'SABOR' => 'Manga',
-            'PRECO_DE_LISTA' => '3.8595',
+            'PRECO_DE_LISTA' => '3.85',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '243083',
@@ -146,7 +146,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Maracujá',
-            'PRECO_DE_LISTA' => '10.512',
+            'PRECO_DE_LISTA' => '10.50',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '290478',
@@ -154,7 +154,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Lata',
             'TAMANHO' => '350 ml',
             'SABOR' => 'Melancia',
-            'PRECO_DE_LISTA' => '4.56',
+            'PRECO_DE_LISTA' => '5.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '326779',
@@ -162,7 +162,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Manga',
-            'PRECO_DE_LISTA' => '16.5105',
+            'PRECO_DE_LISTA' => '16.50',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '394479',
@@ -170,7 +170,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Cereja',
-            'PRECO_DE_LISTA' => '8.409',
+            'PRECO_DE_LISTA' => '8.40',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '479745',
@@ -178,7 +178,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '470 ml',
             'SABOR' => 'Laranja',
-            'PRECO_DE_LISTA' => '3.768',
+            'PRECO_DE_LISTA' => '3.80',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '520380',
@@ -186,7 +186,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1 Litro',
             'SABOR' => 'Maçã',
-            'PRECO_DE_LISTA' => '12.011',
+            'PRECO_DE_LISTA' => '12.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '695594',
@@ -194,7 +194,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Açaí',
-            'PRECO_DE_LISTA' => '28.512',
+            'PRECO_DE_LISTA' => '28.50',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '723457',
@@ -202,7 +202,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Maracujá',
-            'PRECO_DE_LISTA' => '4.912',
+            'PRECO_DE_LISTA' => '4.90',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '746596',
@@ -210,7 +210,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Melancia',
-            'PRECO_DE_LISTA' => '19.505',
+            'PRECO_DE_LISTA' => '19.50',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '773912',
@@ -218,7 +218,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1 Litro',
             'SABOR' => 'Laranja',
-            'PRECO_DE_LISTA' => '8.008',
+            'PRECO_DE_LISTA' => '8.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '783663',
@@ -226,7 +226,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Morango',
-            'PRECO_DE_LISTA' => '7.709',
+            'PRECO_DE_LISTA' => '7.70',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '788975',
@@ -234,7 +234,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Maçã',
-            'PRECO_DE_LISTA' => '18.011',
+            'PRECO_DE_LISTA' => '18.00',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '812829',
@@ -242,7 +242,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Lata',
             'TAMANHO' => '350 ml',
             'SABOR' => 'Laranja',
-            'PRECO_DE_LISTA' => '2.808',
+            'PRECO_DE_LISTA' => '2.80',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '826490',
@@ -250,7 +250,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'Garrafa',
             'TAMANHO' => '700 ml',
             'SABOR' => 'Morango/Limão',
-            'PRECO_DE_LISTA' => '6.3105',
+            'PRECO_DE_LISTA' => '6.30',
         ]);
         DB::table('tabela_de_produtos')->insert([
             'CODIGO_DO_PRODUTO' => '838819',
@@ -258,7 +258,7 @@ class ProdutosSeeder extends Seeder
             'EMBALAGEM' => 'PET',
             'TAMANHO' => '1,5 Litros',
             'SABOR' => 'Laranja',
-            'PRECO_DE_LISTA' => '12.008',
+            'PRECO_DE_LISTA' => '12.00',
         ]);
     }
 }
