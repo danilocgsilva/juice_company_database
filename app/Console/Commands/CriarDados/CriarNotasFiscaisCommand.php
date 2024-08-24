@@ -15,7 +15,7 @@ class CriarNotasFiscaisCommand extends Command
 
     protected $description = 'Adiciona nota fiscal no banco (uma ou várias segundo parâmetro)';
 
-    public function __construct()
+    public function handle()
     {
         if (!$this->existeCliente()) {
             throw new Exception("É preciso ter alguma cliente cadastrado antes de criar uma nota fiscal.");
@@ -25,11 +25,6 @@ class CriarNotasFiscaisCommand extends Command
             throw new Exception("É preciso ter algum vendedor antes de gerar alguma nota fiscal.");
         }
         
-        parent::__construct();
-    }
-
-    public function handle()
-    {
         for ($i = 0; $i < ($quantidadeGerada = (int) $this->option('quantidade')); $i++) {
             NotaFiscal::factory()->create();
         }
