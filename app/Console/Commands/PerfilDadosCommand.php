@@ -21,7 +21,6 @@ class PerfilDadosCommand extends Command
             DB::reconnect();
         }
         $stringToLog = PHP_EOL;
-        // $stringToLog .= sprintf("Nome do banco de dados: %s." . $this->option('banco-de-dados') ?? env("DB_DATABASE") . PHP_EOL);
         $stringToLog .= sprintf("Nome do banco de dados: %s" . PHP_EOL, $this->option('banco-de-dados') ?? env("DB_DATABASE"));
         $stringToLog .= "Tabelas: " . PHP_EOL;
         foreach (config('app.tabelas') as $tabela) {
